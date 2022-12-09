@@ -1,0 +1,17 @@
+1.setting.py
+---------------------
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'OTtodo',
+        'USER': 'postgresql',
+        'PASSWORD': '7012',
+        'HOST' : 'localhost'
+    }
+}
+
+2.Todo migrate
+--python manage.py migrate
+--python manage.py makemigrations model'sname
+--python manage.py sqlmigrate todoapp 0001
+--python manage.py migrate

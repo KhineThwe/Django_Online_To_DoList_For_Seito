@@ -15,3 +15,22 @@ DATABASES = {
 --python manage.py makemigrations model'sname
 --python manage.py sqlmigrate todoapp 0001
 --python manage.py migrate
+
+3.to add templates folder
+ကျွန်တော်တို့က project ရေးတဲ့ချိန်မှာ MVC model view controller ပုံစံအနေနဲ့လည်းသွားတာလည်းရှိသလို MVT model
+view template အနေနဲ့သွားတာမျိုးလည်းရှိတယ်
+In MVC ---> model views design controller execute code
+In MVT ---> model views execute code templates design
+--controller ထဲမှာ data ယူတာတို့ data ထည့်တာတို့လိုမျိုး တကယ်အလုပ်လုပ်မဲ့ code တွေရေးတယ်
+--django မှာက MVT pattern နဲ့ရေးတာ
+      --view ထဲမှာ တကယ် အလုပ်လုပ်မဲ့ ကောင်တွေရေးတယ်
+      --template ထဲမှာ design code တွေရေးတယ်
+---Template folder ဆောက်တယ် ပြီးရင် app name နဲ့တူတဲ့ ပုံစံမျိုးနဲ့ folder တစ်ခုထပ်ဆောက်ရမယ်
+
+4.To get bootstrap
+---> getboostrap.com ကိုသွား
+--->cdnjs သွား for fontawesome
+container က သင့်တော်လျောက်ပတ်သလောက်ပဲ နေရာယူတယ်
+container fluid က အပြည့်ယူတယ်
+Boostrap ရဲ့ grid system တွေမှာ ၄မျိုးရှိ 
+1.xs for phone,sm for tablet,md for desktop,lg for larger desktop

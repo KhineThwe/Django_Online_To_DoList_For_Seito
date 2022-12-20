@@ -1,6 +1,20 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,redirect
+from django.http import HttpResponse,HttpRequest
+from . models import Todoapp
 
 # Create your views here.
 def todo_list(request):
-    return render(request,'todoapp/todo_list.html')
+    all_data = {'todo_list':Todoapp.objects.all()}
+    return render(request,'todoapp/todo_list.html',all_data)
+
+def insert(request:HttpRequest):
+    todo = Todoapp(content = request.POST['content'])#model class ထဲကို content pass lote
+    #html page ka ya lr tae kg ko pass lote mal
+    todo.save()
+    # return render(request,'todoapp/todo_list.html')
+    return redirect('/todo/list/')
+
+def delete_todo(request,todo_id):
+    delete_id = Todoapp.objects.get(id=todo_id)
+    delete_id.delete()
+    return redirect('/todo/list/')
